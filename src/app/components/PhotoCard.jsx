@@ -5,7 +5,7 @@ import { BiDownload } from 'react-icons/bi';
 import { Button, Chip, Separator } from '@heroui/react';
 
 const PhotoCard = ({photo}) => {
-    console.log(photo);
+    // console.log(photo);
     return (
       <card className='border rounded-xl'  >
          <div className='relative w-full  aspect-square'>
