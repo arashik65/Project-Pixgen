@@ -10,7 +10,7 @@ const PhotoDetailsPage = async ({params}) => {
     const res= await fetch('https://project-pixgen.vercel.app/data.json');
     const photos = await res.json();
     const photo = photos.find(p=> p.id ==id);
-    console.log(photo);
+    // console.log(photo);
     return (
       <div className="max-w-6xl mx-auto p-6">
   <div className="grid md:grid-cols-2 gap-8">

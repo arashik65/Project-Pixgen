@@ -1,15 +1,12 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import Banner from "./components/Banner";
 import Footer from "./components/Footer";
+import ToastProvider from "./components/ToastProvider";
 
 const OutfitFont = Outfit({
-
   subsets: ["latin"],
 });
-
-
 
 export const metadata = {
   title: "Create Next App",
@@ -20,13 +17,19 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${OutfitFont.className}  h-full antialiased`}
+      className={`${OutfitFont.className} h-full antialiased`}
     >
       <body>
-        <Navbar></Navbar>
-      <main className=" max-w-7xl mx-auto">  {children} </main>
-        <Footer></Footer>
-        </body>
+        <Navbar />
+
+        <main className="max-w-7xl mx-auto">
+          {children}
+        </main>
+
+        <Footer />
+
+        <ToastProvider />
+      </body>
     </html>
   );
 }
